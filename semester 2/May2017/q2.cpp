@@ -56,7 +56,7 @@ int main(){
 	int halfway=100*150/2, sparseCount=0;
 	for(int r=0;r<100;r++)
 		for(int c=0;c<150;c++)
-			if(picture[r][c].red==0 && picture[r][c].blue==0 && picture[r][c]==0)
+			if(picture[r][c].red==0 && picture[r][c].blue==0 && picture[r][c].green==0)
 				sparseCount++;
 	bool sparse=sparseCount>=halfway;
 	return 0;
