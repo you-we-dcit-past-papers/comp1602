@@ -8,25 +8,23 @@ using namespace std;
 
 //functions
 /*
-i) first 4 passes of insertion sort would be
----- [1,7,3,4,6,9,8,5]
----- [1,3,7,4,6,9,8,5]
----- [1,3,4,7,6,9,8,5]
----- [1,3,4,5,6,9,8,7]
+i) num=[6,7,3,4,1,9,8,5]
+---- [6,7,3,4,1,9,8,5]
+---- [3,6,7,4,1,9,8,5]
+---- [3,4,6,7,1,9,8,5]
+---- [1,3,4,6,7,9,8,5]
 */
 void insertionSort(int arr[], int size){ //part iii
-	for(int i=0;i<size-1;i++){
-		int low=arr[i], index=i; //arr[i] can be used since the smallest from i to size-1 would be selected regardless
-		for(int c=i+1;c<size;c++){
-			if(arr[c]<low){
-				index=c;
-				low=arr[c];
+	int temp, i, j;
+	for(i=1;i<size;i++){
+		for(j=i;j>0;j--){
+			if(arr[j-1]>arr[j]){
+				//then swap
+				temp=arr[j];
+				arr[j]=arr[j-1];
+				arr[j-1]=temp;
 			}
 		}
-		
-		int temp=arr[index];
-		arr[index]=arr[i];
-		arr[i]=temp;
 	}
 }
 
