@@ -24,8 +24,8 @@ ii)
 ---- [6,8,17,3,12,8,23,29,32,32]
 
 iii)
-if the array was already sorted, the bubble sort would be more efficient
-since insertion will still check a lot of points each iteration
+if the array was already sorted, the insertion sort would be more efficient
+since insertion sort will only need to iterate the array once
 
 
 b) num=[34,32,29,23,17,12,8,6,3,1]
