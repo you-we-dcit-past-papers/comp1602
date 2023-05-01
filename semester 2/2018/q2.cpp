@@ -22,12 +22,15 @@ bool isValid(Cell board[][100], int numRows, int row, int col) {
     return (row >= 0 && row < numRows) && (col >= 0 && col < numRows);
 }
 
-void placeBulb(Cell board[][100], int numRows){
-    for(int i = 1; i <= 10; i++){
+void placeBulbs(Cell board[][100], int numRows){
+    int times=0.1*(numRows*numRows), i=0;
+    while(i<times){
         int row = rand()%numRows;
         int col = rand()%numRows;
+        if(board[row][col].hasLightBulb) continue; //light already on
         board[row][col].hasLightBulb = true;
         board[row][col].isHidden = false;
+        i++; //increment for unique lightbulbs to turn on, for random selections but 10% in quantity
     }
 }
 
@@ -65,7 +68,7 @@ int main() {
     Cell board[numRows][100];
 
     initBoard(board, numRows);
-    placeBulb(board, numRows);
+    placeBulbs(board, numRows);
 
     std::cout << "Initial board:" << std::endl;
     for (int i = 0; i < numRows; i++) {
