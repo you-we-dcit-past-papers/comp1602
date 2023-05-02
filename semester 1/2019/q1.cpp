@@ -20,7 +20,7 @@ int main(){
 	//part A
 	for(int a=0;a<26;a++){
 		if(a%5==0) cout<<endl;
-		cout<<('A'+a)<<' '<<('a'+a)<<'\t';
+		cout<<char('A'+a)<<' '<<char('a'+a)<<'\t';
 	}
 	cout<<"\n\n"; //just to put visual space between A and B when outputting on the console
 	
