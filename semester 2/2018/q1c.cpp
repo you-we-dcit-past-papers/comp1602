@@ -29,6 +29,16 @@ bool isPanagram(char s[]){
     return true;
 }
 
+bool isPanagram(char s[]) {
+    bool found[26] = {false};
+    for(int i = 0; i < strlen(s); i++) 
+        if(isLetter(s[i])) 
+            found[toLower(s[i]) - 'a'] = true;
+    for (int i = 0; i < 26; i++)
+        if (!found[i]) return false;
+    return true;
+}
+
 int main() {
     char ch[] = "The Quick Brown Fox Jumps Over The Lazy Dog";
     std::cout << ch;

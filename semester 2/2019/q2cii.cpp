@@ -3,14 +3,13 @@ const int MAX = 3;
 
 bool isMagicSquare(int arr[][MAX], int n){
     int sum = 0, dSum = 0, dSum2 = 0;
-    for(int j = 0; j < n; j++){
+    for(int j = 0; j < n; j++)
         sum += arr[0][j];
-    }
     for(int i = 0; i < n; i++){
         int sumCol = 0, sumRows = 0;
         for(int j = 0; j < n; j++){
             sumRows += arr[i][j];
-            sumCol += arr[i][j];
+            sumCol += arr[j][i];
         }
         if(sumRows != sum || sumCol != sum) return false;
         dSum += arr[i][i];

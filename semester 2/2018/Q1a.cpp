@@ -9,10 +9,9 @@ int length(char ch[]){
 
 void append(char s[], char t[]){
     int slen = length(s), tlen = length(t);
-    int total = slen + tlen;
     for(int i = 0; i < tlen; i++)
         s[slen + i] = t[i];
-    s[total] = '\0';
+    s[slen + tlen] = '\0';
 }
 
 int main() {
