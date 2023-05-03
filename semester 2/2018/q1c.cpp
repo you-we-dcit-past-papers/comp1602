@@ -29,7 +29,7 @@ bool isPanagram(char s[]){
     return true;
 }
 
-bool isPanagram(char s[]) {
+bool isPanagram(char s[]) { // alternative solution
     bool found[26] = {false};
     for(int i = 0; i < strlen(s); i++) 
         if(isLetter(s[i])) 

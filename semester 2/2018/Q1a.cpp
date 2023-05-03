@@ -1,6 +1,6 @@
 #include <iostream> // rename
 
-int length(char ch[]){
+int length(const char ch[]){
     int i = 0;
     while(ch[i] != '\0')
         i++;

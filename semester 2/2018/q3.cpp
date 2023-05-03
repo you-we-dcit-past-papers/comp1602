@@ -16,7 +16,7 @@
 // Amara Anon Julia Kamryn Julia Mila
 
 // b.
-// Pass	Low 	High	Mid	    Mid Value
+// Pass	    Low 	High	Mid	    Mid Value
 // 1	    0	    5	    2	    35
 // 2	    3	    5	    4	    89
 // 3	    3	    3	    3	    47
@@ -25,5 +25,6 @@
 // Left  Right  Mid  Mid Value
 // 0     5      2    35
 // 3     5      4    89
-// 3     3      -    -
+// 3     3      3    35
+// 4     3      -     -
 // Since 55 is not found in the array, the function would return -1.

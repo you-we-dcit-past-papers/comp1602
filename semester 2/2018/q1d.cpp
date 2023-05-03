@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int strlen(char ch[]){
+int strlen(const char ch[]){
     int i = 0;
     while(ch[i] != '\0')
         i++;

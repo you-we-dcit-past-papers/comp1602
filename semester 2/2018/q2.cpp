@@ -23,21 +23,19 @@ bool isValid(Cell board[][100], int numRows, int row, int col) {
 }
 
 void placeBulbs(Cell board[][100], int numRows){
-    int times=0.1*(numRows*numRows), i=0;
-    while(i<times){
+    int n = 0.1 * (numRows * numRows);
+    for(int i = 0; i < n; i++){
         int row = rand()%numRows;
         int col = rand()%numRows;
-        if(board[row][col].hasLightBulb) continue; //light already on
         board[row][col].hasLightBulb = true;
         board[row][col].isHidden = false;
-        i++; //increment for unique lightbulbs to turn on, for random selections but 10% in quantity
     }
 }
 
 int getNumber(Cell board[][100], int numRows, int row, int col){
-    if (!isValid(board, numRows, row, col)) {
+    if (!isValid(board, numRows, row, col)) 
         return -1; // or any other value to indicate that the cell is invalid
-    }
+    
     int i = 0; 
     if (row > 0) i += board[row - 1][col].hasLightBulb;
     if (row < numRows - 1)   i += board[row + 1][col].hasLightBulb;
@@ -60,9 +58,9 @@ bool isCrooked(Cell board[][100], int numRows){
         for(int j = 0; j < numRows; j++)
             if(board[i][j].hasLightBulb)
                 if(j > i)
-                    top++;
+                    top += board[i][j].hasLightBulb;
                 else if(i > j)
-                    bottom++;
+                    bottom+= board[i][j].hasLightBulb;
     return top > bottom;
 }
 
