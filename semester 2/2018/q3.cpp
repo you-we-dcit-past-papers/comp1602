@@ -2,19 +2,18 @@
 // Insertion
 
 // Pass	    Array
-// 1	    Ann Kamryn Mila Julia Julia Amara
-// 2	    Ann Julia Kamryn Mila Julia Amara
-// 3       Ann Kamryn Julia Mila Julia Amara
+// 1	    Anon Mila Kamryn Julia Julia Amara
+// 2	    Anon Kamryn Mila Julia Julia Amara
+// 3        Anon Julia Kamryn Mila Julia Amara
 
 // Bubble Sort
-// Ann Mila Kamryn Julia Julia Amara
+// Anon Mila Kamryn Julia Julia Amara
 // Pass 1:
-// Amara Mila Kamryn Julia Julia Ann
+// Amara Mila Kamryn Julia Julia Anon
 // Pass 2:
-// Amara Ann Mila Kamryn Julia Julia
+// Amara Anon Kamryn Julia Julia Mila
 // Pass 3:
-// Amara Ann Julia Karyn Mila Julia
-
+// Amara Anon Julia Kamryn Julia Mila
 
 // b.
 // Pass	Low 	High	Mid	    Mid Value
