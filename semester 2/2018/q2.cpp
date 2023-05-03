@@ -41,12 +41,16 @@ int getNumber(Cell board[][100], int numRows, int row, int col){
     int i = 0; 
     if (row > 0) i += board[row - 1][col].hasLightBulb;
     if (row < numRows - 1)   i += board[row + 1][col].hasLightBulb;
+
     if (col > 0)  i += board[row][col - 1].hasLightBulb;
     if (col < numRows - 1)    i += board[row][col + 1].hasLightBulb;
+
     if (row > 0 && col > 0) i += board[row - 1][col - 1].hasLightBulb;
     if (row > 0 && col < numRows - 1) i += board[row - 1][col + 1].hasLightBulb;
+
     if (row < numRows - 1 && col > 0) i += board[row + 1][col - 1].hasLightBulb;
     if (row < numRows - 1 && col < numRows - 1) i += board[row + 1][col + 1].hasLightBulb;
+
     return i;
 }
 
@@ -57,7 +61,7 @@ bool isCrooked(Cell board[][100], int numRows){
             if(board[i][j].hasLightBulb)
                 if(j > i)
                     top++;
-                else
+                else if(i > j)
                     bottom++;
     return top > bottom;
 }
