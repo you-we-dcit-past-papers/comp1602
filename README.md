@@ -12,10 +12,10 @@ Code blocks with a comment of _testing_ are unneeded in the exam and made for pr
   <code>There are several ways to save this repository on your device. Two of these options include:</code>
 </summary>
 
-- [Downloading repository as ZIP](https://github.com/uwi-dcit-past-papers/comp1602/archive/refs/heads/main.zip)
+- [Downloading repository as ZIP](https://github.com/you-we-dcit-past-papers/comp1602/archive/refs/heads/main.zip)
 - Running the following command in a terminal, provided the [GitHub CLI](https://cli.github.com/) has been previously installed:
 ```sh
-git clone https://github.com/uwi-dcit-past-papers/comp1602.git
+git clone https://github.com/you-we-dcit-past-papers/comp1602.git
 ```
 You're ready to go! Browse the repository and use the past paper questions to practice.
 </details>
